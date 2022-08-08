@@ -95,20 +95,21 @@ public class PomodoroCmd {
         String[] comands = readLine().split(" ");
         for (int i = 0; i < comands.length; i++) {
             switch (comands[i]) {
-                case "-help" -> helpMessage();
-                case "-d" -> {
+                case "-help" : helpMessage();break;
+                case "-d" : {
                     repeats = COUNT_REPEAT;
                     breakTime = DEFAULT_BREAK_TIME;
                     longBreakTime = DEFAULT_LONG_BREAK_TIME;
                     workTime = DEFAULT_WORK_TIME;
                     multiplier = DEFAULT_MULTIPLIER;
+                    break;
                 }
-                case "-w" -> workTime = Integer.parseInt(comands[++i]);
-                case "-b" -> breakTime = Integer.parseInt(comands[++i]);
-                case "-l" -> longBreakTime = Integer.parseInt(comands[++i]);
-                case "-r" -> repeats = Integer.parseInt(comands[++i]);
-                case "-m" -> multiplier = Integer.parseInt(comands[++i]);
-                case "-exit" -> System.exit(0);
+                case "-w" : workTime = Integer.parseInt(comands[++i]);break;
+                case "-b" : breakTime = Integer.parseInt(comands[++i]);break;
+                case "-l" : longBreakTime = Integer.parseInt(comands[++i]);break;
+                case "-r" : repeats = Integer.parseInt(comands[++i]);break;
+                case "-m" : multiplier = Integer.parseInt(comands[++i]);break;
+                case "-exit" : System.exit(0);break;
 
             }
         }
@@ -121,8 +122,10 @@ public class PomodoroCmd {
 
         boolean isLongBreak = pomodoroStep % 4 == 0;
         workTime = (pomodoroStep > 1) ? multiplier * workTime : workTime;
+
         writeMsg(String.format("Work time: %dmin >> Break time: %dmin ", workTime, isLongBreak ? longBreakTime : breakTime));
-        drawProgress(PomodoroType.Work);
+        drawProgress(PomodoroType.WORK);
+
         System.out.print("\n");
 
         writeMsg(LocalTime.now().format(formatter));
@@ -141,29 +144,31 @@ public class PomodoroCmd {
         Long countPick = 0L;
         String msg = "";
         switch (type) {
-            case Work -> {
+            case WORK : {
                 countPick = workTime * TIME_CONVERTER / TIME_STEP;
                 msg = "Work progress:";
+                break;
             }
-            case Break -> {
+            case BREAK : {
                 countPick = breakTime * TIME_CONVERTER / TIME_STEP;
                 msg = "Break progress:";
+                break;
             }
-            case LongBreak -> {
+            case LONG_BREAK : {
                 countPick = longBreakTime * TIME_CONVERTER / TIME_STEP;
                 msg = "Long break progress:";
             }
         }
-//        long timeBegin = System.currentTimeMillis();
+
         while (pick <= countPick) {
             out += symbol;
             String progressBar = out;
-/*
- TIME_SLEEP = 500;//
- TIMER = 60_000;// (60_000/(500 * 10)) = 12
-COUNT_PROGRESS = 10;
- */
-            //(TIMER / ((COUNT_PROGRESS-1) * TIME_SLEEP))
+            /*
+             TIME_SLEEP = 500;//
+             TIMER = 60_000;// (60_000/(500 * 10)) = 12
+            COUNT_PROGRESS = 10;
+             */
+
             for (int i = 0; i < 12; i++) {
                 progressBar = out;
                 for (int j = 0; j < 10; j++) {
@@ -175,7 +180,6 @@ COUNT_PROGRESS = 10;
             System.out.print(String.format("%s %d%% ->[ %s ]\r", msg, 100 * pick / countPick, out));
             pick++;
         }
-//        long timeEnd = System.currentTimeMillis();
-//        writeMsg("Progress : "+String.valueOf((timeEnd - timeBegin) / 1000));
+
     }
 }

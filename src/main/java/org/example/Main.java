@@ -3,7 +3,7 @@ package org.example;
 import org.example.pomodoro.PomodoroCmd;
 
 import java.io.IOException;
-
+//F:\Kotlin\IdeaProjects\practice_cmd_echo_bot PracticeCmdEchoBor
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         PomodoroCmd pomodoro = new PomodoroCmd();

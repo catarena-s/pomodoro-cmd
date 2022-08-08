@@ -1,5 +1,5 @@
 package org.example.pomodoro;
 
 public enum PomodoroType {
-    Work, Break,LongBreak
+    WORK, BREAK, LONG_BREAK
 }
