@@ -2,13 +2,12 @@ package org.example.pomodoro;
 
 import org.example.helper.IConstante;
 
-public class Pomodoro extends IConstante {
+public class Pomodoro implements IConstante {
     private int repeats;
     private int breakTime;
     private int longBreakTime;
     private int workTime;
     private int multiplier;
-    private boolean isDefault;
 
     public Pomodoro() {
         setDefault();
@@ -20,7 +19,6 @@ public class Pomodoro extends IConstante {
         longBreakTime = DEFAULT_LONG_BREAK_TIME;
         workTime = DEFAULT_WORK_TIME;
         multiplier = DEFAULT_MULTIPLIER;
-        isDefault = true;
     }
 
     public String getDefault() {

@@ -1,6 +1,6 @@
 package org.example.helper;
 
-public class IConstante {
+public interface IConstante {
     public  static final long TIME_SLEEP = 249;//499;//60_000;// задержка 60 сек = 60_000 милисекунд
     public static final int COUNT_REPEAT = 1;// количество повторов
     public static final int DEFAULT_MULTIPLIER = 1;// множитель
@@ -32,6 +32,6 @@ public class IConstante {
                 
             Пример 3 : -dstart    
                 запустится выполнение помидора со значениями по умолчанию
-            \n
+            
             """;
 }

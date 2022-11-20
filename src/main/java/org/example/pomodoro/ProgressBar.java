@@ -11,10 +11,9 @@ import java.text.DecimalFormat;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
-public class ProgressBar extends IConstante {
+public class ProgressBar implements IConstante {
     private static final String FORMAT_PROGRESS_STRING = "%s%-10s |%6s%% -> [ %s ]\r";
     private Pomodoro pomodoro;
-    private String msg;
     private int step = 0;
 
     public void setStep(int step) {
@@ -29,17 +28,15 @@ public class ProgressBar extends IConstante {
         final int countDots = 40;
         final int repeats = 6;
         final String dataStrFormat = status.getDataStrFormat();
-
-
         final String dataStr = getTime(status, dataStrFormat);
-
         final String grid = "#";
-        msg = status.getMassage();
-        String outGrid = "";
+        final String msg = status.getMassage();
 
-        String stringDots = "";
-        for (int i = 0; i < countDots; i++) stringDots += ".";
-        String progressBar = stringDots;
+        StringBuilder outGrid = new StringBuilder();
+        StringBuilder stringDots = new StringBuilder();
+
+        for (int i = 0; i < countDots; i++) stringDots.append(".");
+        String progressBar = stringDots.toString();
 
         long countPick = status.getCountPick(pomodoro);
         double oneStepPercent = (100.0 / countPick) / (countDots * repeats);
@@ -57,16 +54,16 @@ public class ProgressBar extends IConstante {
                     HelpPrinter.printMessage(FORMAT_PROGRESS_STRING, dataStr, msg, format.format(progress), progressBar);
 
                     MathContext context = new MathContext(3, RoundingMode.HALF_UP);
+
                     BigDecimal result = new BigDecimal(progress, context);
                     if (result.doubleValue() % 2.5 == 0) {
-                        outGrid += grid;
+                        outGrid.append(grid);
                         progressBar = String.format("%s%." + (stringDots.length() - outGrid.length()) + "s", outGrid, stringDots);
                     }
                 }
             }
 
-            HelpPrinter.printMessage(FORMAT_PROGRESS_STRING, dataStr, msg,// format.format(progress)
-                    100 * pick / countPick, progressBar);
+            HelpPrinter.printMessage(FORMAT_PROGRESS_STRING, dataStr, msg, 100 * pick / countPick, progressBar);
             pick++;
         }
     }
@@ -81,7 +78,6 @@ public class ProgressBar extends IConstante {
             dataStr = String.format(dataStrFormat, LocalTime.now().format(formatter));
         return dataStr;
     }
-
 
 
 }

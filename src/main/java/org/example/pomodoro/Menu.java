@@ -86,6 +86,7 @@ public enum Menu {
                 printDefault();
                 break;
             }
+            default: return;
         }
     }
 
@@ -105,7 +106,6 @@ public enum Menu {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-//            step++;
         }
         HelpPrinter.printEmptySting();
         HelpPrinter.printMessage("Pomodoro завершен %s\n", LocalTime.now().format(formatter));
