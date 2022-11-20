@@ -1,8 +1,10 @@
-package org.example.pomodoro;
+package org.example;
 
 import org.example.helper.HelpPrinter;
 import org.example.helper.HelpReader;
 import org.example.helper.IConstante;
+import org.example.pomodoro.Menu;
+import org.example.pomodoro.Pomodoro;
 
 import java.io.IOException;
 
@@ -14,18 +16,12 @@ import java.io.IOException;
  */
 public class PomodoroCmd implements IConstante {
 
-    private Pomodoro pomodoro;
-
-    public PomodoroCmd() {
-        HelpPrinter.printMessage(MSG_WELCOME_POMODORO);
-        HelpPrinter.printSeparator();
-        HelpPrinter.printCommands();
-        HelpPrinter.printSeparator();
-        HelpPrinter.printEmptySting();
-        pomodoro = new Pomodoro();
+    public static void main(String[] args) throws IOException {
+        printWelcomeMassage();
+        run(new Pomodoro());
     }
 
-    public void run() throws IOException {
+    public static void run( Pomodoro pomodoro) throws IOException {
         Menu.setPomodoro(pomodoro);
         Menu menu;
 
@@ -35,5 +31,13 @@ public class PomodoroCmd implements IConstante {
             menu.run();
             if (menu == Menu.EXIT) break;
         }
+    }
+
+    private static void printWelcomeMassage() {
+        HelpPrinter.printMessage(MSG_WELCOME_POMODORO);
+        HelpPrinter.printSeparator();
+        HelpPrinter.printCommands();
+        HelpPrinter.printSeparator();
+        HelpPrinter.printEmptySting();
     }
 }
