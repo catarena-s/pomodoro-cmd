@@ -2,7 +2,7 @@ package dev.shvetsova.model.pomodoro;
 
 public class PomodoroDemo extends PomodoroDefault {
     private static final int LONG_BREAK_STEPS = 3;
-    public static final long TIME_SLEEP_DEMO = 1;//249;//499;//60_000;// задержка 60 сек = 60_000 милисекунд
+    public static final long TIME_SLEEP_DEMO = 1;
     public PomodoroDemo() {
         super();
         repeats = 3;
@@ -13,7 +13,8 @@ public class PomodoroDemo extends PomodoroDefault {
         return LONG_BREAK_STEPS;
     }
 
-    public long getTIME_SLEEP() {
+    @Override
+    public long getTimeSleep() {
         return TIME_SLEEP_DEMO;
     }
 

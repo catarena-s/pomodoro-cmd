@@ -13,19 +13,6 @@ public enum PomodoroStatus {
     private final String massage;
     private final String dataStrFormat;
 
-//    PomodoroStatus(String string, String dataStrFormat) {
-//        this.massage = string;
-//        this.dataStrFormat = dataStrFormat;
-//    }
-
-//    public String getDataStrFormat() {
-//        return dataStrFormat;
-//    }
-//
-//    public String getMassage() {
-//        return massage;
-//    }
-
     public long getCountPick(Pomodoro pomodoro) {
         return switch (this) {
             case WORK -> pomodoro.getWorkTime();

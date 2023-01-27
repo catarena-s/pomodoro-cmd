@@ -35,12 +35,7 @@ public class WelcomeMenuServiceImpl extends MenuService {
 
     @Override
     public void execute() {
-        switch (answer) {
-            case "1":
-            case "2":
-                break;
-            default:
-                HelpPrinter.printMessage("Некорректная команда.\n");
-        }
+        if (answer.equals("1") || answer.equals("2")) return;
+        HelpPrinter.printMessage("Некорректная команда.\n");
     }
 }

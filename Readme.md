@@ -14,14 +14,17 @@ Pomodoro
 
 ### Доступныекоманды
 ````
--start - запустить помидор
--help - помощь
--d - использовать значения по умолчанию(-w 25 -b 5 -l 15 -r 1 m-1)
--w - сколько работать (мин)	-> по умолчанию = 25
--b - сколько отдыхать (мин)	-> по умолчанию = 5
+Доступные команды:
+-start
+-dstart - использовать значения по умолчанию(-w 25 -b 5 -l 15 -r 1 m-1)
+-w - установить время для работаты (мин)	-> по умолчанию = 25
+-b - установить время для отдыхата (мин)	-> по умолчанию = 5
 -l - длинный перерыв после 4го помидора (мин)	-> по умолчанию = 15
 -r - количество повторов 	-> по умолчанию = 1
--exit - выход из программы
+-m - множитель(увеличивает время работы не следующих шага) 	-> по умолчанию = 1
+-help - помощь
+-demo - демонстрация в укоренном режие
+-exit - выход
 ````
 
 ### Примеры
@@ -57,13 +60,6 @@ Work (25min) -- Break (5min) -- Long break (10min) -- Repeats = 1
 ````
 
 
-![img.png](img.png)
+![img.png](https://github.com/catarena-s/practice-cmd/blob/e182f344586885ca1ba9081dfc8970879673f2e2/img.png)
 
-
-Pomodoro is an antiprocrastination application that helps in Getting Things Done.
-It is a simple but effective way to manage your time and to boost your productivity to higher levels.
-Can be used for programming, studying, writing, cooking or simply concentrating on something important.
-
-You can find more informations on the Pomodoro Technique on http://www.pomodorotechnique.com/
-Updates, source code, new releases, manual and fixes on http://pomodoro.ugolandini.com
 

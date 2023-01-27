@@ -21,8 +21,6 @@ public class PomodoroCmd {
         IMenuService welcomeMenuService = new WelcomeMenuServiceImpl(new WelcomeMenu());
         welcomeMenuService.printMsg();
         welcomeMenuService.printQuestion();
-//        welcomeMenuService.readAnswer();
-//        welcomeMenuService.execute();
 
         String a;
         do {
@@ -31,7 +29,6 @@ public class PomodoroCmd {
             welcomeMenuService.execute();
             if (a.equals("2")) return;
         } while (!a.equalsIgnoreCase("1") && !a.equalsIgnoreCase("2"));
-//            HelpPrinter.printCommands();
         pomodoroMenuService = new PomodoroMenuService(new PomodoroMenu());
         pomodoroMenuService.printMsg();
         while (true) {
@@ -44,30 +41,5 @@ public class PomodoroCmd {
             }
         }
 
-
-//        PobodoroMenu.setPomodoro(pomodoro);
-//        PobodoroMenu pobodoroMenu;
-/*
-        pomodoroMenuService = new PomodoroMenuService();
-        while (true) {
-//            pobodoroMenu = PobodoroMenu.getMenu(HelpReader.readLine());
-//            pobodoroMenu =
-            pomodoroMenuService.initMenu(HelpReader.readLine());
-            if(pomodoroMenuService.getMenu()!=null){
-
-//            if (pobodoroMenu != null) {
-                pomodoroMenuService.executeCommand();
-                if (pomodoroMenuService.getMenu() == PobodoroMenu.EXIT) break;
-            }
-        }
     }
-*/
-    }
-//    private static void printWelcomeMassage() {
-//        HelpPrinter.printMessage(MSG_WELCOME_POMODORO);
-//        HelpPrinter.printSeparator();
-//        HelpPrinter.printCommands();
-//        HelpPrinter.printSeparator();
-//        HelpPrinter.printEmptySting();
-//    }
 }

@@ -7,12 +7,12 @@ import dev.shvetsova.model.pomodoro.PomodoroDefault;
 import dev.shvetsova.model.pomodoro.PomodoroDemo;
 import dev.shvetsova.model.pomodoro.PomodoroStatus;
 import dev.shvetsova.tools.HelpPrinter;
-import lombok.extern.slf4j.Slf4j;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 import static dev.shvetsova.model.pomodoro.PomodoroDefault.*;
+
 public class PomodoroMenuService extends MenuService {
     private final Pomodoro pomodoro;
     private final PomodoroDefault pomodoroDefault;
@@ -23,7 +23,6 @@ public class PomodoroMenuService extends MenuService {
     private int longBreakTime;
     private int workTime;
     private int multiplier;
-    //    private int step = 1;
 
     public PomodoroMenuService(Menu menu) {
         super(menu);
@@ -36,20 +35,11 @@ public class PomodoroMenuService extends MenuService {
         longBreakTime = DEFAULT_LONG_BREAK_TIME;
         workTime = DEFAULT_WORK_TIME;
         multiplier = DEFAULT_MULTIPLIER;
-        //     this.pomodoro = new Pomodoro();
-//        progressBarService = new ProgressBarService(pomodoro);
-//        progressBar = new ProgressBar(pomodoro);
-//        this.progressBar = progressBar;
     }
 
-//    private  ProgressBar progressBar;
 
     public PobodoroCommands getCommand() {
         return command;
-    }
-
-    public void executeCommand() {
-
     }
 
     public void initMenu(final String userInput) {
@@ -57,50 +47,14 @@ public class PomodoroMenuService extends MenuService {
         this.command = null;
         for (int i = 0; i < commands.length; i++) {
             switch (commands[i]) {
-                case "-start": {
-                    this.command = PobodoroCommands.START;
-                    break;
-                }
-                case "-dstart": {
-                    this.command = PobodoroCommands.START_DEFAULT;
-                    break;
-                }
-                case "-demo": {
-                    this.command = PobodoroCommands.DEMO_MODE;
-                    break;
-                }
-                case "-help": {
-                    this.command = PobodoroCommands.HELP;
-                    break;
-                }
-                case "-exit": {
-                    this.command = PobodoroCommands.EXIT;
-                    break;
-                }
-//                case "-w":
-//                    pomodoro.setWorkTime(Integer.parseInt(commands[++i]));
-//                    break;
-//                case "-b":
-//                    pomodoro.setBreakTime(Integer.parseInt(commands[++i]));
-//                    break;
-//                case "-l":
-//                    pomodoro.setLongBreakTime(Integer.parseInt(commands[++i]));
-//                    break;
-//                case "-r":
-//                    pomodoro.setRepeats(Integer.parseInt(commands[++i]));
-//                    break;
-//                case "-m":
-//                    pomodoro.setMultiplier(Integer.parseInt(commands[++i]));
-//                    break;
-//                case "":
-//                    break;
-                default: {
-                    parseCommand(commands, i);
-//                    HelpPrinter.printMessage("Некорректная команда.\n");
-                }
+                case "-start" -> this.command = PobodoroCommands.START;
+                case "-dstart" -> this.command = PobodoroCommands.START_DEFAULT;
+                case "-demo" -> this.command = PobodoroCommands.DEMO_MODE;
+                case "-help" -> this.command = PobodoroCommands.HELP;
+                case "-exit" -> this.command = PobodoroCommands.EXIT;
+                default -> parseCommand(commands, i);
             }
         }
-//        return menu;
     }
 
     private void parseCommand(final String[] commands, final int i) {
@@ -150,7 +104,6 @@ public class PomodoroMenuService extends MenuService {
             }
         }
         HelpPrinter.printEmptySting();
-//        log.info("Pomodoro завершен {}", LocalTime.now().format(formatter));
         HelpPrinter.printMessage("Pomodoro завершен %s\n", LocalTime.now().format(formatter));
     }
 
@@ -176,23 +129,15 @@ public class PomodoroMenuService extends MenuService {
 
     @Override
     public void execute() {
-        HelpPrinter.printMessage( command.getMassage());
+        HelpPrinter.printMessage(command.getMassage());
         switch (command) {
-            case START: {
+            case START -> {
                 pomodoro.init(workTime, breakTime, longBreakTime, repeats, multiplier);
                 start(pomodoro);
-                break;
             }
-            case START_DEFAULT: {
-                start(pomodoroDefault);
-                break;
-            }
-            case DEMO_MODE: {
-                start(pomodoroDemo);
-                break;
-            }
-            default:
-                return;
+            case START_DEFAULT -> start(pomodoroDefault);
+            case DEMO_MODE -> start(pomodoroDemo);
+            default -> {}
         }
     }
 }

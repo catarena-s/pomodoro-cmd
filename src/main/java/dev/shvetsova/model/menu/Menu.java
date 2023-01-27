@@ -9,15 +9,4 @@ public abstract class Menu {
 
     protected boolean hasQuestion = true;
 
-//    public String getQuestion() {
-//        return question;
-//    }
-//
-//    public boolean isHasQuestion() {
-//        return hasQuestion;
-//    }
-//
-//    public String getMsg() {
-//        return msg;
-//    }
 }
