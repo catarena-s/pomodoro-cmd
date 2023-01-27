@@ -1,14 +1,13 @@
-package org.example.helper;
+package dev.shvetsova.tools;
 
 public class HelpPrinter {
-
     private HelpPrinter() {
     }
 
     public static void printMessage(String message) {
         System.out.print(message);
-
     }
+
     public static void printEmptySting() {
         System.out.println();
     }
@@ -16,6 +15,7 @@ public class HelpPrinter {
     public static void printMessage(String messageTemplate, Object... args) {
         System.out.printf(messageTemplate, args);
     }
+
     public static void printCommands() {
         printMessage(IConstante.MSG_COMMANDS_LIST);
     }
@@ -25,6 +25,6 @@ public class HelpPrinter {
     }
 
     public static void printSeparator() {
-        printMessage("--------------------------------------------------------\n");
+        printMessage("-------------------------------------------------------------------------------------------\n");
     }
 }
