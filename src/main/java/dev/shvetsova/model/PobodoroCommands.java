@@ -1,50 +1,60 @@
-package org.example.pomodoro;
+package dev.shvetsova.model;
 
-import org.example.helper.HelpPrinter;
-import org.example.helper.IConstante;
+import dev.shvetsova.tools.IConstante;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-
-public enum Menu {
+@Getter
+@RequiredArgsConstructor
+public enum PobodoroCommands {
     START("Старт Pomodoro\n"),
     START_DEFAULT("Старт Pomodoro со значениями по умолчанию\n"),
+    DEMO_MODE("Демо режим: \n"),
     HELP(IConstante.MSG_COMMANDS_LIST + IConstante.MSG_EXAMPLES),
-    EXIT("Работа завершена.\n"),
-    PRINT_DEFAULT("Значения по умолчанию\n");
+    EXIT("Работа завершена.\n");
 
-    private static Pomodoro pomodoro;
-    private static ProgressBar progressBar;
+/*    private static Pomodoro pomodoro;
+    private static ProgressBar progressBar;*/
 
-    private String massage = "";
+    private final String massage;
+//
+//    public String getMassage() {
+//        return this.massage;
+//    }
+//
+//    PobodoroCommands(final String str) {
+//        this.massage = str;
+//    }
 
-    Menu(String str) {
-        massage = str;
-    }
-
-    public static void setPomodoro(Pomodoro p) {
+/*    public static void setPomodoro(Pomodoro p) {
         pomodoro = p;
         progressBar = new ProgressBar(pomodoro);
-    }
+    }*/
 
-    public static Menu getMenu(String userInput) {
+/*    public static PobodoroMenu getMenu(String userInput) {
         String[] commands = userInput.split(" ");
+        PobodoroMenu current = null;
         for (int i = 0; i < commands.length; i++) {
-            switch (userInput) {
+            switch (commands[i]) {
                 case "-start": {
-                    return START;
+                    current = START;
+                    break;
                 }
                 case "-dstart": {
-                    return START_DEFAULT;
+                    current = START_DEFAULT;
+                    break;
                 }
                 case "-d": {
-                    return PRINT_DEFAULT;
+                    current = PRINT_DEFAULT;
+                    break;
                 }
                 case "-help": {
-                    return HELP;
+                    current = HELP;
+                    break;
                 }
                 case "-exit": {
-                    return EXIT;
+                    current = EXIT;
+                    break;
                 }
                 case "-w":
                     pomodoro.setWorkTime(Integer.parseInt(commands[++i]));
@@ -64,14 +74,40 @@ public enum Menu {
                 case "":
                     break;
                 default: {
+                    parseCommand(commands[i], commands[++i]);
                     HelpPrinter.printMessage("Некорректная команда.\n");
                 }
             }
         }
-        return null;
+        return current;
     }
 
-    public void run() {
+    private static void parseCommand(String command, String value) {
+        switch (command) {
+            case "-w":
+                pomodoro.setWorkTime(Integer.parseInt(value));
+                break;
+            case "-b":
+                pomodoro.setBreakTime(Integer.parseInt(value));
+                break;
+            case "-l":
+                pomodoro.setLongBreakTime(Integer.parseInt(value));
+                break;
+            case "-r":
+                pomodoro.setRepeats(Integer.parseInt(value));
+                break;
+            case "-m":
+                pomodoro.setMultiplier(Integer.parseInt(value));
+                break;
+            case "":
+                break;
+            default: {
+                HelpPrinter.printMessage("Некорректная команда.\n");
+            }
+        }
+    }*/
+
+/*    public void executeCommand() {
         HelpPrinter.printMessage(this.massage);
         switch (this) {
             case START: {
@@ -86,23 +122,27 @@ public enum Menu {
                 printDefault();
                 break;
             }
-            default: return;
+            default:
+                return;
         }
-    }
-
+    }*/
+/*
     private void start() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
         HelpPrinter.printMessage(
-                "Work time(%dmin) -- Break time(%dmin) -- Long break time(%dmin) " +
-                        "-- Repeats = %d -- Multiplie = %d \n"
+                "Work (%dmin) -- Break (%dmin) -- Long break (%dmin) " +
+                        "-- Repeats = %d  \n"
                 , pomodoro.getWorkTime(), pomodoro.getBreakTime(), pomodoro.getLongBreakTime(),
-                pomodoro.getRepeats(), pomodoro.getMultiplier());
+                pomodoro.getRepeats());
 
+        HelpPrinter.printSeparator();
         int step = 1;
         while (step <= pomodoro.getRepeats()) {
             try {
-                startPomodoro(step++);
-                HelpPrinter.printEmptySting();
+                startPomodoro();
+                step++;
+                pomodoro.incrementSteps();
+                HelpPrinter.printSeparator();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -111,8 +151,9 @@ public enum Menu {
         HelpPrinter.printMessage("Pomodoro завершен %s\n", LocalTime.now().format(formatter));
     }
 
-    private void startPomodoro(int pomodoroStep) throws InterruptedException {
-        boolean isLongBreak = pomodoroStep % 2 == 0;
+    private void startPomodoro() throws InterruptedException {
+        int pomodoroStep = pomodoro.getStep();
+        boolean isLongBreak = pomodoroStep % LONG_BREAK_STEPS == 0;
         pomodoro.setWorkTime((pomodoroStep > 1) ? pomodoro.getMultiplier() * pomodoro.getWorkTime() : pomodoro.getWorkTime());
 
         progressBar.setStep(pomodoroStep);
@@ -134,5 +175,5 @@ public enum Menu {
     private void startDefault() {
         pomodoro.setDefault();
         start();
-    }
+    }*/
 }

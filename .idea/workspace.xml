@@ -5,13 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e559048c-8535-4fff-b9de-75fc56002151" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/PomodoroCmd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/pomodoro/Pomodoro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/pomodoro/PomodoroStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/progressBar/ProgressBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pomodoro/PomodoroCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/pomodoro/PomodoroCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pomodoro/PomodoroType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/pomodoro/PomodoroType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PomodoroCmd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/helper/HelpPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/tools/HelpPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/helper/HelpReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/tools/HelpReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/helper/HelperUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/tools/HelperUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/helper/IConstante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/tools/IConstante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pomodoro/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/PobodoroCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pomodoro/Pomodoro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pomodoro/PomodoroStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pomodoro/ProgressBar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app.property" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app.property" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +56,24 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="practice-cmd" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="practice-cmd" type="f1a62948:ProjectNode" />
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="practice-cmd" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="practice-cmd" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -57,18 +86,41 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="features" />
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2CwFuaR2F6VvXs97fucips4pDvm" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -83,15 +135,46 @@
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Users/Katreena/Downloads/telegrambots-6.1.0.jar&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Kotlin/IdeaProjects/!_gradle-pomodoro-cmd&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.41379312&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="dev.shvetsova.context" />
+      <recent name="dev.shvetsova.menu" />
+      <recent name="org.example.pomodoro" />
+      <recent name="org.example.context" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="org.example.pomodoro.HelpPrinter" />
+      <recent name="org.example.pomodoro.IConstante" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Kotlin\IdeaProjects\practice-cmd" />
+      <recent name="F:\Kotlin\IdeaProjects\practice-cmd\settings" />
+      <recent name="F:\Kotlin\IdeaProjects\practice-cmd\src" />
+      <recent name="F:\Kotlin\IdeaProjects\practice-cmd\src\main" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="dev.shvetsova" />
+      <recent name="org.example.pomodoro" />
+      <recent name="org.example.context" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.pomodoro" />
     </key>
   </component>
@@ -101,9 +184,9 @@
       <command value="gradle dependencies" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="BotSolution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.BotSolution" />
+  <component name="RunManager" selected="Application.dev.shvetsova.PomodoroCmd">
+    <configuration name="PomodoroCmd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.PomodoroCmd" />
       <module name="practice-cmd.main" />
       <extension name="coverage">
         <pattern>
@@ -115,25 +198,71 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+    <configuration name="dev.shvetsova.PomodoroCmd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.shvetsova.PomodoroCmd" />
       <module name="practice-cmd.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="dev.shvetsova.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="ProgressBarTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.context.ProgressBarTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ProgressBarTest.getCurrentTime" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.context.ProgressBarTest.getCurrentTime&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="practice-cmd [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -149,33 +278,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="practice-cmd [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BotSolution" />
-        <item itemvalue="Gradle.practice-cmd [dependencies]" />
         <item itemvalue="Gradle.practice-cmd [build]" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.dev.shvetsova.PomodoroCmd" />
+        <item itemvalue="Application.PomodoroCmd" />
+        <item itemvalue="Gradle.ProgressBarTest" />
+        <item itemvalue="Gradle.ProgressBarTest.getCurrentTime" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +310,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="features" />
                       </list>
                     </value>
                   </entry>
@@ -212,12 +321,89 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="features" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/shvetsova/service/PomodoroMenuService.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/shvetsova/service/PomodoroMenuService.java</url>
+          <line>126</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/shvetsova/service/PomodoroMenuService.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/shvetsova/PomodoroCmd.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/shvetsova/PomodoroCmd.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/shvetsova/service/PomodoroMenuService.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/shvetsova/PomodoroCmd.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/shvetsova/PomodoroCmd.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/shvetsova/PomodoroCmd.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="GradleRunConfiguration">
-        <watch expression="(TIMER / (COUNT_PROGRESS * TIME_SLEEP))" language="JAVA" />
-        <watch expression="COUNT_PROGRESS" language="JAVA" />
+        <watch expression="progressBar.getCurrentStatus().getDataStrFormat()" language="JAVA" />
+        <watch expression="String.format(progressBar.getCurrentStatus().getDataStrFormat(), progressBar.getStep(), progressBar.getBegin(), time)" language="JAVA" />
+        <watch expression="result.doubleValue() % 2.5" language="JAVA" />
+        <watch expression="pomodoroMenuService.getMenu()" language="JAVA" />
+        <watch expression="pomodoroMenuService.getCommand()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

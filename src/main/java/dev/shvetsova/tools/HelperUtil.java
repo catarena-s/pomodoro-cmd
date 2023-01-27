@@ -1,4 +1,4 @@
-package org.example.helper;
+package dev.shvetsova.tools;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
