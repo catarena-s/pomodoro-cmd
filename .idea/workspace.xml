@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e559048c-8535-4fff-b9de-75fc56002151" name="Changes" comment="back up">
+    <list default="true" id="e559048c-8535-4fff-b9de-75fc56002151" name="Changes" comment="version 27.01.2023">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/shvetsova/PomodoroCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/PomodoroCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/PobodoroCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/PobodoroCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/menu/MenuManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/pomodoro/Pomodoro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/pomodoro/Pomodoro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/pomodoro/PomodoroDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/pomodoro/PomodoroDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/pomodoro/PomodoroStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/pomodoro/PomodoroStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/progressBar/ProgressBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/model/ProgressBar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/shvetsova/service/PomodoroMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/service/PomodoroMenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/shvetsova/service/ProgressBarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/shvetsova/service/ProgressBarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/shvetsova/service/ProgressBarService_.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,29 +115,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "F:/Kotlin/IdeaProjects/!_gradle-pomodoro-cmd",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.41379312",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Kotlin/IdeaProjects/!_gradle-pomodoro-cmd&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.41379312&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="dev.shvetsova.context" />

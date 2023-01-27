@@ -60,6 +60,6 @@ Work (25min) -- Break (5min) -- Long break (10min) -- Repeats = 1
 ````
 
 
-![img.png](https://github.com/catarena-s/practice-cmd/blob/e182f344586885ca1ba9081dfc8970879673f2e2/img.png)
+![img.png](https://github.com/catarena-s/practice-cmd/blob/main/img.png)
 
 
