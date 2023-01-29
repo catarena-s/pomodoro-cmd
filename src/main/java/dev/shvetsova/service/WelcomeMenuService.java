@@ -7,20 +7,18 @@ import lombok.extern.slf4j.Slf4j;
 import java.io.IOException;
 
 @Slf4j
-public class WelcomeMenuServiceImpl extends MenuService {
+public class WelcomeMenuService extends MenuService {
     static final String NUMBER_FORMAT_EXCEPTION = "Введено некорректное значение.";
 
-    public WelcomeMenuServiceImpl(Menu menu) {
+    public WelcomeMenuService(Menu menu) {
         super(menu);
     }
 
     @Override
     public void readAnswer() throws IOException {
-        boolean isCorrectAnswer;
         do {
             super.readAnswer();
-            isCorrectAnswer = checkAnswer();
-        } while (!isCorrectAnswer);
+        } while (!checkAnswer());
     }
 
     private boolean checkAnswer() {

@@ -27,7 +27,6 @@ public class IConstante {
                 запустится выполнение помидора со значениями по умолчанию
              \033[0m
             """;
-
     private IConstante() {
     }
 }

@@ -1,5 +1,6 @@
-package dev.shvetsova.model.pomodoro;
+package dev.shvetsova.model;
 
+import dev.shvetsova.model.pomodoro.Pomodoro;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
@@ -20,6 +21,4 @@ public enum PomodoroStatus {
             case LONG_BREAK -> pomodoro.getLongBreakTime();
         };
     }
-
-
 }

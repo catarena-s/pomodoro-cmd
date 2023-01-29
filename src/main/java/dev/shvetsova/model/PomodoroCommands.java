@@ -6,7 +6,7 @@ import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
-public enum PobodoroCommands {
+public enum PomodoroCommands {
     START("Старт Pomodoro\n"),
     START_DEFAULT("Старт Pomodoro со значениями по умолчанию\n"),
     DEMO_MODE("Демо режим: \n"),

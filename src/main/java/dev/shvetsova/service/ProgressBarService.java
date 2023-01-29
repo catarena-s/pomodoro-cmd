@@ -1,8 +1,8 @@
 package dev.shvetsova.service;
 
-import dev.shvetsova.model.pomodoro.Pomodoro;
-import dev.shvetsova.model.pomodoro.PomodoroStatus;
+import dev.shvetsova.model.PomodoroStatus;
 import dev.shvetsova.model.ProgressBar;
+import dev.shvetsova.model.pomodoro.Pomodoro;
 import dev.shvetsova.tools.HelpPrinter;
 import dev.shvetsova.tools.HelperUtil;
 

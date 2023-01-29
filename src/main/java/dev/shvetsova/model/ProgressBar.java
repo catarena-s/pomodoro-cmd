@@ -1,7 +1,6 @@
 package dev.shvetsova.model;
 
 import dev.shvetsova.model.pomodoro.Pomodoro;
-import dev.shvetsova.model.pomodoro.PomodoroStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -34,11 +33,9 @@ public class ProgressBar {
         this.pomodoro = pomodoro;
         stringDots = ".".repeat(COUNT_DOTS);
     }
-
     public void incrementProgress() {
         progress += oneStepPercent;
     }
-
     public void initProgressBar(PomodoroStatus currentStatus, LocalTime beginTime) {
         this.currentStatus = currentStatus;
         this.begin = beginTime.format(formatter);
