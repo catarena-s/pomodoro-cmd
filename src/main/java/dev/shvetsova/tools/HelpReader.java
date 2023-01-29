@@ -10,7 +10,6 @@ public class HelpReader {
     static {
         reader = new BufferedReader(new InputStreamReader(System.in));
     }
-
     public static String readLine() throws IOException {
         return reader.readLine();
     }

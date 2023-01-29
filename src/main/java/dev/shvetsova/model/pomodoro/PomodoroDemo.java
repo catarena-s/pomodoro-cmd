@@ -12,11 +12,8 @@ public class PomodoroDemo extends PomodoroDefault {
     public int getLongBreakSteps() {
         return LONG_BREAK_STEPS;
     }
-
     @Override
     public long getTimeSleep() {
         return TIME_SLEEP_DEMO;
     }
-
-
 }

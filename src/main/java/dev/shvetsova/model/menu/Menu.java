@@ -8,5 +8,4 @@ public abstract class Menu {
     protected String question;
 
     protected boolean hasQuestion = true;
-
 }

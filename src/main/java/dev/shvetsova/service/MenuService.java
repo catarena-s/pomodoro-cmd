@@ -3,13 +3,22 @@ package dev.shvetsova.service;
 import dev.shvetsova.model.menu.Menu;
 import dev.shvetsova.tools.HelpPrinter;
 import dev.shvetsova.tools.HelpReader;
-import lombok.Getter;
 
 import java.io.IOException;
 
-@Getter
 public abstract class MenuService implements IMenuService {
     private final Menu menu;
+
+    public Menu getMenu() {
+        return menu;
+    }
+
+    @Override
+    public String getAnswer() throws IOException {
+        readAnswer();
+        return answer;
+    }
+
     protected String answer;
 
     protected MenuService(Menu menu) {
@@ -26,8 +35,7 @@ public abstract class MenuService implements IMenuService {
         HelpPrinter.printMessage(menu.getQuestion());
     }
 
-    @Override
-    public void readAnswer() throws IOException {
+    protected void readAnswer() throws IOException {
         answer = HelpReader.readLine();
     }
 }
