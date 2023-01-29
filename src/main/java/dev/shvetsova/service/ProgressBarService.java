@@ -17,7 +17,6 @@ public class ProgressBarService {
     private final DecimalFormat decimalFormat = HelperUtil.initDecimalFormat();
     private final ProgressBar progressBar;
 
-
     public ProgressBarService(Pomodoro pomodoro) {
         this.progressBar = new ProgressBar(pomodoro);
     }

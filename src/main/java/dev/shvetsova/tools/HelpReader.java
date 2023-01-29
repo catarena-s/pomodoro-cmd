@@ -13,5 +13,4 @@ public class HelpReader {
     public static String readLine() throws IOException {
         return reader.readLine();
     }
-
 }

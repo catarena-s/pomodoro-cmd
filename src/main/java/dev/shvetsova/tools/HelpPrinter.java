@@ -23,6 +23,7 @@ public class HelpPrinter {
     public static void helpMessage() {
         printMessage(IConstante.MSG_COMMANDS_LIST + IConstante.MSG_EXAMPLES);
     }
+
     public static void printSeparator() {
         printMessage("-------------------------------------------------------------------------------------------\n");
     }

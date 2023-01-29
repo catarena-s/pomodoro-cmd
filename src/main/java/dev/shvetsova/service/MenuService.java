@@ -8,7 +8,6 @@ import java.io.IOException;
 
 public abstract class MenuService implements IMenuService {
     private final Menu menu;
-
     public Menu getMenu() {
         return menu;
     }

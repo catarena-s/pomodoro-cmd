@@ -38,6 +38,5 @@ public class PomodoroCmd {
                 pomodoroMenuService.execute();
             }
         } while (true);
-
     }
 }

@@ -12,6 +12,5 @@ public enum PomodoroCommands {
     DEMO_MODE("Демо режим: \n"),
     HELP(IConstante.MSG_COMMANDS_LIST + IConstante.MSG_EXAMPLES),
     EXIT("Работа завершена.\n");
-
     private final String massage;
 }

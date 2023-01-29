@@ -12,7 +12,6 @@ public enum PomodoroStatus {
 
     private final String massage;
     private final String dataStrFormat;
-
     public long getCountPick(Pomodoro pomodoro) {
         return switch (this) {
             case WORK -> pomodoro.getWorkTime();
@@ -20,6 +19,4 @@ public enum PomodoroStatus {
             case LONG_BREAK -> pomodoro.getLongBreakTime();
         };
     }
-
-
 }

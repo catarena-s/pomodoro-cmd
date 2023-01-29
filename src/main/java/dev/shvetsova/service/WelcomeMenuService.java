@@ -20,7 +20,6 @@ public class WelcomeMenuService extends MenuService {
             super.readAnswer();
         } while (!checkAnswer());
     }
-
     private boolean checkAnswer() {
         try {
             Integer.parseInt(answer);

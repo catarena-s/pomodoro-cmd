@@ -48,7 +48,6 @@ public class ProgressBar {
         msg = currentStatus.getMassage() + "(" + countPick + "min)";
         oneStepPercent = (100.0 / countPick) / (COUNT_DOTS * REPEATS);
     }
-
     public void setOutGrid(String outGrid) {
         this.outGrid.append(outGrid);
     }

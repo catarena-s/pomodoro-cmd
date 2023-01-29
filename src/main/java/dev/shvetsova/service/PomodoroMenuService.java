@@ -82,7 +82,6 @@ public class PomodoroMenuService extends MenuService {
             }
         }
     }
-
     private void start(Pomodoro pomodoro) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
         HelpPrinter.printMessage("""

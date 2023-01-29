@@ -8,6 +8,5 @@ import lombok.RequiredArgsConstructor;
 public enum Command {
     EXECUTE("Выполнить"),
     EXIT("Работа завершена.\n");
-
     private final String massage;
 }
