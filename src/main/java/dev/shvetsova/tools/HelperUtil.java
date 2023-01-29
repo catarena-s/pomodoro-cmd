@@ -6,7 +6,6 @@ import java.text.DecimalFormatSymbols;
 public class HelperUtil {
     private HelperUtil() {
     }
-
     public static DecimalFormat initDecimalFormat() {
         DecimalFormat format = new DecimalFormat("00.00");
         DecimalFormatSymbols symbols = new DecimalFormatSymbols();

@@ -1,8 +1,8 @@
 package dev.shvetsova.service;
 
-import dev.shvetsova.model.pomodoro.Pomodoro;
-import dev.shvetsova.model.pomodoro.PomodoroStatus;
+import dev.shvetsova.model.PomodoroStatus;
 import dev.shvetsova.model.ProgressBar;
+import dev.shvetsova.model.pomodoro.Pomodoro;
 import dev.shvetsova.tools.HelpPrinter;
 import dev.shvetsova.tools.HelperUtil;
 
@@ -16,7 +16,6 @@ public class ProgressBarService {
     private final MathContext context = new MathContext(4, RoundingMode.HALF_UP);
     private final DecimalFormat decimalFormat = HelperUtil.initDecimalFormat();
     private final ProgressBar progressBar;
-
 
     public ProgressBarService(Pomodoro pomodoro) {
         this.progressBar = new ProgressBar(pomodoro);

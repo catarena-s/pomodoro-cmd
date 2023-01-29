@@ -1,11 +1,12 @@
 package dev.shvetsova.service;
 
-import dev.shvetsova.model.PobodoroCommands;
+import dev.shvetsova.model.PomodoroCommands;
+import dev.shvetsova.model.PomodoroStatus;
 import dev.shvetsova.model.menu.Menu;
 import dev.shvetsova.model.pomodoro.Pomodoro;
+import dev.shvetsova.model.pomodoro.PomodoroCustom;
 import dev.shvetsova.model.pomodoro.PomodoroDefault;
 import dev.shvetsova.model.pomodoro.PomodoroDemo;
-import dev.shvetsova.model.pomodoro.PomodoroStatus;
 import dev.shvetsova.tools.HelpPrinter;
 
 import java.time.LocalTime;
@@ -14,10 +15,10 @@ import java.time.format.DateTimeFormatter;
 import static dev.shvetsova.model.pomodoro.PomodoroDefault.*;
 
 public class PomodoroMenuService extends MenuService {
-    private final Pomodoro pomodoro;
+    private final PomodoroCustom pomodoro;
     private final PomodoroDefault pomodoroDefault;
     private final PomodoroDemo pomodoroDemo;
-    private PobodoroCommands command;
+    private PomodoroCommands command;
     private int repeats;
     private int breakTime;
     private int longBreakTime;
@@ -26,7 +27,7 @@ public class PomodoroMenuService extends MenuService {
 
     public PomodoroMenuService(Menu menu) {
         super(menu);
-        pomodoro = new Pomodoro();
+        pomodoro = new PomodoroCustom();
         pomodoroDefault = new PomodoroDefault();
         pomodoroDemo = new PomodoroDemo();
 
@@ -38,20 +39,20 @@ public class PomodoroMenuService extends MenuService {
     }
 
 
-    public PobodoroCommands getCommand() {
+    public PomodoroCommands getCommand() {
         return command;
     }
 
-    public void initMenu(final String userInput) {
+    public void parseMenuCommand(final String userInput) {
         String[] commands = userInput.split(" ");
         this.command = null;
         for (int i = 0; i < commands.length; i++) {
             switch (commands[i]) {
-                case "-start" -> this.command = PobodoroCommands.START;
-                case "-dstart" -> this.command = PobodoroCommands.START_DEFAULT;
-                case "-demo" -> this.command = PobodoroCommands.DEMO_MODE;
-                case "-help" -> this.command = PobodoroCommands.HELP;
-                case "-exit" -> this.command = PobodoroCommands.EXIT;
+                case "-start" -> this.command = PomodoroCommands.START;
+                case "-dstart" -> this.command = PomodoroCommands.START_DEFAULT;
+                case "-demo" -> this.command = PomodoroCommands.DEMO_MODE;
+                case "-help" -> this.command = PomodoroCommands.HELP;
+                case "-exit" -> this.command = PomodoroCommands.EXIT;
                 default -> parseCommand(commands, i);
             }
         }
@@ -81,7 +82,6 @@ public class PomodoroMenuService extends MenuService {
             }
         }
     }
-
     private void start(Pomodoro pomodoro) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
         HelpPrinter.printMessage("""
@@ -137,7 +137,8 @@ public class PomodoroMenuService extends MenuService {
             }
             case START_DEFAULT -> start(pomodoroDefault);
             case DEMO_MODE -> start(pomodoroDemo);
-            default -> {}
+            default -> {
+            }
         }
     }
 }

@@ -5,8 +5,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Pomodoro {
-    protected static final long TIME_SLEEP = 249;//249;//499;//60_000;// задержка 60 сек = 60_000 милисекунд
+public abstract class Pomodoro {
+    protected static final long TIME_SLEEP = 249;//249;//499;//60_000;// задержка 60 сек = 60_000 миллисекунд
     protected int repeats;
     protected int breakTime;
     protected int longBreakTime;
@@ -19,16 +19,11 @@ public class Pomodoro {
         return TIME_SLEEP;
     }
 
-    public void incrementSteps() {
-        step++;
+    public int getLongBreakSteps() {
+        return longBreakSteps;
     }
 
-    public void init(int workTime, int breakTime, int longBreakTime, int repeats, int multiplier) {
-        this.repeats = repeats;
-        this.breakTime = breakTime;
-        this.longBreakTime = longBreakTime;
-        this.longBreakSteps = 4;
-        this.workTime = workTime;
-        this.multiplier = multiplier;
+    public void incrementSteps() {
+        step++;
     }
 }

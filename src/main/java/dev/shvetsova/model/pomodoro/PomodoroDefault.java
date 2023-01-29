@@ -7,17 +7,12 @@ public class PomodoroDefault extends Pomodoro {
     public static final int DEFAULT_BREAK_TIME = 5;// перерыв
     public static final int DEFAULT_LONG_BREAK_TIME = 10;// долгий перерыв
     private static final int DEFAULT_LONG_BREAK_STEPS = 4;
-
     public PomodoroDefault() {
         repeats = COUNT_REPEAT;
         breakTime = DEFAULT_BREAK_TIME;
         longBreakTime = DEFAULT_LONG_BREAK_TIME;
+        longBreakSteps = DEFAULT_LONG_BREAK_STEPS;
         workTime = DEFAULT_WORK_TIME;
         multiplier = DEFAULT_MULTIPLIER;
-    }
-
-    @Override
-    public int getLongBreakSteps() {
-        return DEFAULT_LONG_BREAK_STEPS;
     }
 }

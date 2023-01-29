@@ -22,12 +22,10 @@ public class IConstante {
              \033[36m    
             Пример 2 : -start
                 
-                
             Пример 3 : -dstart    
                 запустится выполнение помидора со значениями по умолчанию
              \033[0m
             """;
-
     private IConstante() {
     }
 }
