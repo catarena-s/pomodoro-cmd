@@ -1,11 +1,11 @@
 package dev.shvetsova;
 
-import dev.shvetsova.model.PomodoroCommands;
-import dev.shvetsova.model.menu.PomodoroMenu;
-import dev.shvetsova.model.menu.WelcomeMenu;
-import dev.shvetsova.service.IMenuService;
-import dev.shvetsova.service.PomodoroMenuService;
-import dev.shvetsova.service.WelcomeMenuService;
+import dev.shvetsova.pomodoro.PomodoroCommands;
+import dev.shvetsova.menu.model.PomodoroMenu;
+import dev.shvetsova.menu.model.WelcomeMenu;
+import dev.shvetsova.menu.service.IMenuService;
+import dev.shvetsova.menu.service.PomodoroMenuService;
+import dev.shvetsova.menu.service.WelcomeMenuService;
 
 import java.io.IOException;
 

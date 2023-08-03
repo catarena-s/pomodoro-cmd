@@ -1,18 +1,19 @@
-package dev.shvetsova.service;
+package dev.shvetsova.menu.service;
 
-import dev.shvetsova.model.PomodoroCommands;
-import dev.shvetsova.model.PomodoroStatus;
-import dev.shvetsova.model.menu.Menu;
-import dev.shvetsova.model.pomodoro.Pomodoro;
-import dev.shvetsova.model.pomodoro.PomodoroCustom;
-import dev.shvetsova.model.pomodoro.PomodoroDefault;
-import dev.shvetsova.model.pomodoro.PomodoroDemo;
+import dev.shvetsova.pomodoro.PomodoroCommands;
+import dev.shvetsova.pomodoro.PomodoroStatus;
+import dev.shvetsova.menu.model.Menu;
+import dev.shvetsova.pomodoro.model.Pomodoro;
+import dev.shvetsova.pomodoro.model.PomodoroCustom;
+import dev.shvetsova.pomodoro.model.PomodoroDefault;
+import dev.shvetsova.pomodoro.model.PomodoroDemo;
+import dev.shvetsova.progressBar.service.ProgressBarService;
 import dev.shvetsova.tools.HelpPrinter;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
-import static dev.shvetsova.model.pomodoro.PomodoroDefault.*;
+import static dev.shvetsova.pomodoro.model.PomodoroDefault.*;
 
 public class PomodoroMenuService extends MenuService {
     private final PomodoroCustom pomodoro;
@@ -100,7 +101,7 @@ public class PomodoroMenuService extends MenuService {
                 pomodoro.incrementSteps();
                 HelpPrinter.printSeparator();
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                throw new RuntimeException(e.getMessage());
             }
         }
         HelpPrinter.printEmptySting();

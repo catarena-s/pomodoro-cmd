@@ -1,4 +1,4 @@
-package dev.shvetsova.model.pomodoro;
+package dev.shvetsova.pomodoro.model;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,14 +1,11 @@
-package dev.shvetsova.service;
+package dev.shvetsova.menu.service;
 
-import dev.shvetsova.model.menu.Menu;
+import dev.shvetsova.menu.model.Menu;
 import dev.shvetsova.tools.HelpPrinter;
-import lombok.extern.slf4j.Slf4j;
-
 import java.io.IOException;
 
-@Slf4j
 public class WelcomeMenuService extends MenuService {
-    static final String NUMBER_FORMAT_EXCEPTION = "Введено некорректное значение.";
+    static final String NUMBER_FORMAT_EXCEPTION = "Введено некорректное значение.\n";
 
     public WelcomeMenuService(Menu menu) {
         super(menu);
@@ -20,12 +17,13 @@ public class WelcomeMenuService extends MenuService {
             super.readAnswer();
         } while (!checkAnswer());
     }
+
     private boolean checkAnswer() {
         try {
             Integer.parseInt(answer);
             return true;
         } catch (NumberFormatException ex) {
-            log.error(NUMBER_FORMAT_EXCEPTION);
+            HelpPrinter.printMessage(NUMBER_FORMAT_EXCEPTION);
         }
         return false;
     }

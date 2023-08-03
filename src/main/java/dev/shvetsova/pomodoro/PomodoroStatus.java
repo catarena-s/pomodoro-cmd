@@ -1,6 +1,6 @@
-package dev.shvetsova.model;
+package dev.shvetsova.pomodoro;
 
-import dev.shvetsova.model.pomodoro.Pomodoro;
+import dev.shvetsova.pomodoro.model.Pomodoro;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 

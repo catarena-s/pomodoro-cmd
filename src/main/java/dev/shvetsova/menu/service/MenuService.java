@@ -1,6 +1,6 @@
-package dev.shvetsova.service;
+package dev.shvetsova.menu.service;
 
-import dev.shvetsova.model.menu.Menu;
+import dev.shvetsova.menu.model.Menu;
 import dev.shvetsova.tools.HelpPrinter;
 import dev.shvetsova.tools.HelpReader;
 
@@ -8,6 +8,7 @@ import java.io.IOException;
 
 public abstract class MenuService implements IMenuService {
     private final Menu menu;
+
     public Menu getMenu() {
         return menu;
     }

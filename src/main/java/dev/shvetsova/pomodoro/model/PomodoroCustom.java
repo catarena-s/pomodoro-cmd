@@ -1,4 +1,4 @@
-package dev.shvetsova.model.pomodoro;
+package dev.shvetsova.pomodoro.model;
 
 public class PomodoroCustom extends PomodoroDefault {
     public void init(int workTime, int breakTime, int longBreakTime, int repeats, int multiplier) {

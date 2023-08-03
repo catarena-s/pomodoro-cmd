@@ -1,4 +1,4 @@
-package dev.shvetsova.service;
+package dev.shvetsova.menu.service;
 
 import java.io.IOException;
 

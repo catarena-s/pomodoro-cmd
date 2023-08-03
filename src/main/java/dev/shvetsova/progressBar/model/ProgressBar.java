@@ -1,17 +1,18 @@
-package dev.shvetsova.model;
+package dev.shvetsova.progressBar.model;
 
-import dev.shvetsova.model.pomodoro.Pomodoro;
+import dev.shvetsova.pomodoro.PomodoroStatus;
+import dev.shvetsova.pomodoro.model.Pomodoro;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
+
+import static dev.shvetsova.tools.Constants.FORMATTER;
 
 @Getter
 @Setter
 public class ProgressBar {
     public static final String FORMAT_PROGRESS_STRING = "%s%-17s |%6s%% -> [ %s ]\r";
-    public static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
     public static final String GRID = "#";
     public static final int COUNT_DOTS = 40;
     public static final int REPEATS = 6;
@@ -38,7 +39,7 @@ public class ProgressBar {
     }
     public void initProgressBar(PomodoroStatus currentStatus, LocalTime beginTime) {
         this.currentStatus = currentStatus;
-        this.begin = beginTime.format(formatter);
+        this.begin = beginTime.format(FORMATTER);
 
         progress = 0.0;
         outGrid = new StringBuilder();
@@ -53,7 +54,7 @@ public class ProgressBar {
     }
 
     public void setCurrentTime(LocalTime currentTime) {
-        String time = currentTime.format(formatter);
+        String time = currentTime.format(FORMATTER);
 
         if (currentStatus == PomodoroStatus.WORK)
             this.currentTime = String.format(dataStrFormat, step, begin, time);

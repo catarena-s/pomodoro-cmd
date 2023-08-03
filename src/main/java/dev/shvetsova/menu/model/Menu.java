@@ -1,4 +1,4 @@
-package dev.shvetsova.model.menu;
+package dev.shvetsova.menu.model;
 
 import lombok.Getter;
 

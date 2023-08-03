@@ -1,20 +1,20 @@
-package dev.shvetsova.service;
+package dev.shvetsova.progressBar.service;
 
-import dev.shvetsova.model.PomodoroStatus;
-import dev.shvetsova.model.ProgressBar;
-import dev.shvetsova.model.pomodoro.Pomodoro;
+import dev.shvetsova.pomodoro.PomodoroStatus;
+import dev.shvetsova.pomodoro.model.Pomodoro;
+import dev.shvetsova.progressBar.model.ProgressBar;
 import dev.shvetsova.tools.HelpPrinter;
-import dev.shvetsova.tools.HelperUtil;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.time.LocalTime;
 
 public class ProgressBarService {
     private final MathContext context = new MathContext(4, RoundingMode.HALF_UP);
-    private final DecimalFormat decimalFormat = HelperUtil.initDecimalFormat();
+    private final DecimalFormat decimalFormat = initDecimalFormat();
     private final ProgressBar progressBar;
 
     public ProgressBarService(Pomodoro pomodoro) {
@@ -64,5 +64,13 @@ public class ProgressBarService {
     private String getCurrentProgressString(ProgressBar progressBar) {
         return String.format(ProgressBar.FORMAT_PROGRESS_STRING, progressBar.getCurrentTime()
                 , progressBar.getMsg(), decimalFormat.format(progressBar.getProgress()), progressBar.getProgressBarString());
+    }
+
+    private DecimalFormat initDecimalFormat() {
+        DecimalFormat format = new DecimalFormat("00.00");
+        DecimalFormatSymbols symbols = new DecimalFormatSymbols();
+        symbols.setDecimalSeparator('.');
+        format.setDecimalFormatSymbols(symbols);
+        return format;
     }
 }
