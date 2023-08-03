@@ -1,18 +1,21 @@
---------
-Pomodoro
---------
+## Pomodoro
+![Java](https://img.shields.io/badge/java-17-%23ED8B00.svg?style=flat&logo=openjdk&logoColor=white)
+![Lombok](https://img.shields.io/badge/Lombok-1.18.24-red.svg?style=flat&logo=Lombok&logoColor=white)
+![Intellj_Idea](https://img.shields.io/badge/intellj_Idea-v2022.12-blue.svg?style=flat&logo=intellij-idea&logoColor=white)
+![Gradle](https://img.shields.io/badge/Gradle-v7.4-green.svg?style=flat&logo=gradle&logoColor=white)
+
 «Метод помидора» — техника управления временем, предложенная Франческо Чирилло в конце 1980-х.
 Методика предполагает увеличение эффективности работы при меньших временных затратах за счёт 
 глубокой концентрации и коротких перерывов. [Википедия](https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%BF%D0%BE%D0%BC%D0%B8%D0%B4%D0%BE%D1%80%D0%B0)
 
-#### Базовые принципы
+## Базовые принципы
 1. Определитесь с задачами, которые планируете выполнять, расставьте приоритеты (см. матрица Эйзенхауэра)
 2. Установите таймер на 20-25 минут.
 3. Работайте, ни на что не отвлекаясь, до сигнала таймера
 4. Сделайте короткий перерыв (5 минут).
 5. После каждого 4-го «помидора» делайте длинный перерыв (15-30 минут).
 
-### Доступныекоманды
+## Доступныекоманды
 ````
 Доступные команды:
 -start
@@ -27,7 +30,7 @@ Pomodoro
 -exit - выход
 ````
 
-### Примеры
+## Примеры
 ````
 -start
 Старт Pomodoro
