@@ -1,10 +1,10 @@
-package dev.shvetsova.model.menu;
+package dev.shvetsova.menu.model;
 
-import dev.shvetsova.tools.IConstante;
+import dev.shvetsova.tools.Constants;
 
 public class PomodoroMenu extends Menu {
     public PomodoroMenu() {
-        msg = IConstante.MSG_COMMANDS_LIST;
+        msg = Constants.MSG_COMMANDS_LIST;
         question = "Введите команду: \n";
     }
 }

@@ -1,4 +1,4 @@
-package dev.shvetsova.model.pomodoro;
+package dev.shvetsova.pomodoro.model;
 
 public class PomodoroDefault extends Pomodoro {
     public static final int COUNT_REPEAT = 2;// количество повторов

@@ -1,6 +1,13 @@
 package dev.shvetsova.tools;
 
-public class IConstante {
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
+import java.time.format.DateTimeFormatter;
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class Constants {
+    public static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("HH:mm:ss");
     public static final String MSG_WELCOME_POMODORO = "\033[1;30;43;51m Добро пожаловать в Pomodoro - это приложение для личной эффективности. \033[0m\n";
     public static final String MSG_COMMANDS_LIST = """
             \033[36m Доступные команды:
@@ -26,6 +33,4 @@ public class IConstante {
                 запустится выполнение помидора со значениями по умолчанию
              \033[0m
             """;
-    private IConstante() {
-    }
 }

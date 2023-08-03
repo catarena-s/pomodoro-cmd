@@ -1,4 +1,4 @@
-package dev.shvetsova.model;
+package dev.shvetsova.pomodoro;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -8,5 +8,6 @@ import lombok.RequiredArgsConstructor;
 public enum Command {
     EXECUTE("Выполнить"),
     EXIT("Работа завершена.\n");
+
     private final String massage;
 }

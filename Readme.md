@@ -60,6 +60,10 @@ Work (25min) -- Break (5min) -- Long break (10min) -- Repeats = 1
 ````
 
 
-![img.png](https://github.com/catarena-s/practice-cmd/blob/main/img.png)
+![img.png](res/img.png)
 
+## Запуск
 
+    gradle build
+    
+    java -jar  build/libs/pomodoro.jar

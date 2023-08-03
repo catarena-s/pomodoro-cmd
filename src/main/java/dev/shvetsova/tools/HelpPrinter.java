@@ -1,9 +1,10 @@
 package dev.shvetsova.tools;
 
-public class HelpPrinter {
-    private HelpPrinter() {
-    }
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class HelpPrinter {
     public static void printMessage(String message) {
         System.out.print(message);
     }
@@ -17,11 +18,11 @@ public class HelpPrinter {
     }
 
     public static void printCommands() {
-        printMessage(IConstante.MSG_COMMANDS_LIST);
+        printMessage(Constants.MSG_COMMANDS_LIST);
     }
 
     public static void helpMessage() {
-        printMessage(IConstante.MSG_COMMANDS_LIST + IConstante.MSG_EXAMPLES);
+        printMessage(Constants.MSG_COMMANDS_LIST + Constants.MSG_EXAMPLES);
     }
 
     public static void printSeparator() {

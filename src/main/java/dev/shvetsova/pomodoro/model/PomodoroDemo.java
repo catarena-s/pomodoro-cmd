@@ -1,4 +1,4 @@
-package dev.shvetsova.model.pomodoro;
+package dev.shvetsova.pomodoro.model;
 
 public class PomodoroDemo extends PomodoroDefault {
     private static final int LONG_BREAK_STEPS = 3;
